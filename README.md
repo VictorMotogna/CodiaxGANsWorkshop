@@ -50,7 +50,7 @@ For more info check __[this](https://conda.io/docs/user-guide/tasks/index.html)_
 ## Environment Creation & Dependencies
 
 For this workshop create a new environment using the provided gans_workshop.yaml by running:
-* `conda env create -f .environments/sgans_environment_OS.yml`
+* `conda env create -f .environments/gans_environment_OS.yml`
 
 Activate the new created environment using:
 * `source activate gans_workshop` (Mac/Linux)
