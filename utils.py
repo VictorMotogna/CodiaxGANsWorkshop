@@ -159,6 +159,8 @@ class Dataset(object):
         IMAGE_WIDTH = 28
         IMAGE_HEIGHT = 28
 
+        self.process_img = True if dataset_name == DATASET_CELEBA_NAME else False
+
         if dataset_name == DATASET_CELEBA_NAME:
             self.image_mode = 'RGB'
             image_channels = 3
@@ -183,7 +185,7 @@ class Dataset(object):
             data_batch = get_batch(
                 self.data_files[current_index:current_index + batch_size],
                 *self.shape[1:3],
-                self.image_mode)
+                self.image_mode, self.process_img)
 
             current_index += batch_size
 
